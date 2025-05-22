@@ -139,6 +139,7 @@
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(6);
             Name = "Pr5_2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pr5_2";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();

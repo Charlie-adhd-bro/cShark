@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 
 namespace Pr5
 {
@@ -16,5 +8,22 @@ namespace Pr5
         {
             InitializeComponent();
         }
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void btnRepeat_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = null;
+            textBox.Clear();
+        }
+        private void btnTransition_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMain mainForm = new();
+            mainForm.Show();
+        }
+
+       
     }
 }

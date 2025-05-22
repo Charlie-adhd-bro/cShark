@@ -47,8 +47,9 @@
             labelInstructions.Location = new Point(25, 21);
             labelInstructions.Margin = new Padding(6, 0, 6, 0);
             labelInstructions.Name = "labelInstructions";
-            labelInstructions.Size = new Size(0, 32);
+            labelInstructions.Size = new Size(302, 64);
             labelInstructions.TabIndex = 3;
+            labelInstructions.Text = "Введите символы один за другим (осталось: 10)";
             labelInstructions.TextAlign = ContentAlignment.TopCenter;
             // 
             // flowLayoutPanel2
@@ -59,7 +60,7 @@
             flowLayoutPanel2.Margin = new Padding(6);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Padding = new Padding(19, 21, 19, 21);
-            flowLayoutPanel2.Size = new Size(369, 100);
+            flowLayoutPanel2.Size = new Size(369, 102);
             flowLayoutPanel2.TabIndex = 7;
             // 
             // textBox
@@ -99,11 +100,11 @@
             flowLayoutPanel1.Controls.Add(btnRepeat);
             flowLayoutPanel1.Controls.Add(btnTransition);
             flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 100);
+            flowLayoutPanel1.Location = new Point(0, 102);
             flowLayoutPanel1.Margin = new Padding(6);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(19, 21, 19, 21);
-            flowLayoutPanel1.Size = new Size(369, 374);
+            flowLayoutPanel1.Size = new Size(369, 429);
             flowLayoutPanel1.TabIndex = 6;
             // 
             // btnRepeat
@@ -132,12 +133,13 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(369, 474);
+            ClientSize = new Size(369, 531);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(flowLayoutPanel2);
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(5, 6, 5, 6);
             Name = "Pr5_3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pr5_3";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();

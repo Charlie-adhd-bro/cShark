@@ -34,13 +34,13 @@
             btnSubmit = new Button();
             labelResult = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            btnRepeat = new Button();
-            btnTransition = new Button();
-            radioInt = new RadioButton();
-            radioChar = new RadioButton();
-            textBoxEnd = new TextBox();
             label1 = new Label();
             label3 = new Label();
+            textBoxEnd = new TextBox();
+            radioInt = new RadioButton();
+            radioChar = new RadioButton();
+            btnRepeat = new Button();
+            btnTransition = new Button();
             flowLayoutPanel2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -117,6 +117,54 @@
             flowLayoutPanel1.Size = new Size(378, 480);
             flowLayoutPanel1.TabIndex = 6;
             // 
+            // label1
+            // 
+            label1.Location = new Point(25, 21);
+            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(151, 32);
+            label1.TabIndex = 8;
+            label1.Text = "Начало";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(25, 72);
+            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(151, 32);
+            label3.TabIndex = 9;
+            label3.Text = "Конец";
+            label3.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // textBoxEnd
+            // 
+            textBoxEnd.Location = new Point(188, 78);
+            textBoxEnd.Margin = new Padding(6);
+            textBoxEnd.Name = "textBoxEnd";
+            textBoxEnd.Size = new Size(151, 39);
+            textBoxEnd.TabIndex = 7;
+            // 
+            // radioInt
+            // 
+            radioInt.Location = new Point(22, 126);
+            radioInt.Name = "radioInt";
+            radioInt.Size = new Size(154, 36);
+            radioInt.TabIndex = 5;
+            radioInt.TabStop = true;
+            radioInt.Text = "Цифры";
+            radioInt.UseVisualStyleBackColor = true;
+            // 
+            // radioChar
+            // 
+            radioChar.Location = new Point(182, 126);
+            radioChar.Name = "radioChar";
+            radioChar.Size = new Size(165, 36);
+            radioChar.TabIndex = 6;
+            radioChar.TabStop = true;
+            radioChar.Text = "Символы";
+            radioChar.UseVisualStyleBackColor = true;
+            // 
             // btnRepeat
             // 
             btnRepeat.Location = new Point(188, 171);
@@ -139,54 +187,6 @@
             btnTransition.UseVisualStyleBackColor = true;
             btnTransition.Click += btnTransition_Click;
             // 
-            // radioInt
-            // 
-            radioInt.Location = new Point(22, 126);
-            radioInt.Name = "radioInt";
-            radioInt.Size = new Size(154, 36);
-            radioInt.TabIndex = 5;
-            radioInt.TabStop = true;
-            radioInt.Text = "Цифры";
-            radioInt.UseVisualStyleBackColor = true;
-            // 
-            // radioChar
-            // 
-            radioChar.Location = new Point(182, 126);
-            radioChar.Name = "radioChar";
-            radioChar.Size = new Size(165, 36);
-            radioChar.TabIndex = 6;
-            radioChar.TabStop = true;
-            radioChar.Text = "Символы";
-            radioChar.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEnd
-            // 
-            textBoxEnd.Location = new Point(188, 78);
-            textBoxEnd.Margin = new Padding(6);
-            textBoxEnd.Name = "textBoxEnd";
-            textBoxEnd.Size = new Size(151, 39);
-            textBoxEnd.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.Location = new Point(25, 21);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 32);
-            label1.TabIndex = 8;
-            label1.Text = "Начало";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            label3.Location = new Point(25, 72);
-            label3.Margin = new Padding(6, 0, 6, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(151, 32);
-            label3.TabIndex = 9;
-            label3.Text = "Конец";
-            label3.TextAlign = ContentAlignment.TopCenter;
-            // 
             // Pr5_5
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -197,6 +197,7 @@
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(6);
             Name = "Pr5_5";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pr5_5";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();

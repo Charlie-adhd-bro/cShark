@@ -47,9 +47,9 @@
             label2.Location = new Point(25, 21);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(125, 32);
+            label2.Size = new Size(210, 32);
             label2.TabIndex = 3;
-            label2.Text = "Введите n";
+            label2.Text = "Введите символы";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // flowLayoutPanel2
@@ -80,6 +80,7 @@
             btnSubmit.TabIndex = 0;
             btnSubmit.Text = "Результат";
             btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // labelResult
             // 
@@ -115,6 +116,7 @@
             btnRepeat.TabIndex = 3;
             btnRepeat.Text = "Сброс";
             btnRepeat.UseVisualStyleBackColor = true;
+            btnRepeat.Click += btnRepeat_Click;
             // 
             // btnTransition
             // 
@@ -125,6 +127,7 @@
             btnTransition.TabIndex = 4;
             btnTransition.Text = "Вернуться ";
             btnTransition.UseVisualStyleBackColor = true;
+            btnTransition.Click += btnTransition_Click;
             // 
             // Pr5_7
             // 
@@ -136,6 +139,7 @@
             Font = new Font("Segoe UI", 18F);
             Margin = new Padding(6);
             Name = "Pr5_7";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pr5_7";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();

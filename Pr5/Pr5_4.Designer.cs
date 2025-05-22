@@ -30,7 +30,6 @@
         {
             label2 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            textBox = new TextBox();
             btnSubmit = new Button();
             labelResult = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -47,9 +46,9 @@
             label2.Location = new Point(25, 21);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(125, 32);
+            label2.Size = new Size(266, 32);
             label2.TabIndex = 3;
-            label2.Text = "Введите n";
+            label2.Text = "Выполнить программу";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // flowLayoutPanel2
@@ -63,17 +62,9 @@
             flowLayoutPanel2.Size = new Size(369, 67);
             flowLayoutPanel2.TabIndex = 7;
             // 
-            // textBox
-            // 
-            textBox.Location = new Point(25, 27);
-            textBox.Margin = new Padding(6);
-            textBox.Name = "textBox";
-            textBox.Size = new Size(314, 39);
-            textBox.TabIndex = 1;
-            // 
             // btnSubmit
             // 
-            btnSubmit.Location = new Point(25, 78);
+            btnSubmit.Location = new Point(25, 27);
             btnSubmit.Margin = new Padding(6);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(139, 49);
@@ -85,7 +76,7 @@
             // labelResult
             // 
             labelResult.AutoSize = true;
-            labelResult.Location = new Point(176, 72);
+            labelResult.Location = new Point(176, 21);
             labelResult.Margin = new Padding(6, 0, 6, 0);
             labelResult.Name = "labelResult";
             labelResult.Size = new Size(0, 32);
@@ -94,7 +85,6 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(textBox);
             flowLayoutPanel1.Controls.Add(btnSubmit);
             flowLayoutPanel1.Controls.Add(labelResult);
             flowLayoutPanel1.Controls.Add(btnRepeat);
@@ -109,7 +99,7 @@
             // 
             // btnRepeat
             // 
-            btnRepeat.Location = new Point(188, 78);
+            btnRepeat.Location = new Point(188, 27);
             btnRepeat.Margin = new Padding(6);
             btnRepeat.Name = "btnRepeat";
             btnRepeat.Size = new Size(151, 49);
@@ -120,7 +110,7 @@
             // 
             // btnTransition
             // 
-            btnTransition.Location = new Point(25, 139);
+            btnTransition.Location = new Point(25, 88);
             btnTransition.Margin = new Padding(6);
             btnTransition.Name = "btnTransition";
             btnTransition.Size = new Size(139, 49);
@@ -139,6 +129,7 @@
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(6);
             Name = "Pr5_4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pr5_4";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
@@ -151,7 +142,6 @@
 
         private Label label2;
         private FlowLayoutPanel flowLayoutPanel2;
-        private TextBox textBox;
         private Button btnSubmit;
         private Label labelResult;
         private FlowLayoutPanel flowLayoutPanel1;

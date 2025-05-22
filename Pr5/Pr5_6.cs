@@ -30,14 +30,11 @@
         {
             try
             {
-                // Парсим введенные числа
                 string[] inputs = textBox.Text.Split([' ', ','], StringSplitOptions.RemoveEmptyEntries);
                 int[] numbers = Array.ConvertAll(inputs, int.Parse);
 
-                // Получаем результат
                 int[] result = FindMinMax(numbers);
 
-                // Выводим результат
                 labelResult.Text = $"Минимальное: {result[0]}, Максимальное: {result[1]}";
             }
             catch (FormatException)

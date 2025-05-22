@@ -36,6 +36,7 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            buttonExit = new Button();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,17 +60,18 @@
             flowLayoutPanel1.Controls.Add(button5);
             flowLayoutPanel1.Controls.Add(button6);
             flowLayoutPanel1.Controls.Add(button7);
+            flowLayoutPanel1.Controls.Add(buttonExit);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(6);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(19, 21, 19, 21);
-            flowLayoutPanel1.Size = new Size(194, 474);
+            flowLayoutPanel1.Size = new Size(341, 335);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // button2
             // 
-            button2.Location = new Point(25, 88);
+            button2.Location = new Point(176, 27);
             button2.Margin = new Padding(6);
             button2.Name = "button2";
             button2.Size = new Size(139, 49);
@@ -80,7 +82,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(25, 149);
+            button3.Location = new Point(25, 88);
             button3.Margin = new Padding(6);
             button3.Name = "button3";
             button3.Size = new Size(139, 49);
@@ -91,7 +93,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(25, 210);
+            button4.Location = new Point(176, 88);
             button4.Margin = new Padding(6);
             button4.Name = "button4";
             button4.Size = new Size(139, 49);
@@ -102,7 +104,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(25, 271);
+            button5.Location = new Point(25, 149);
             button5.Margin = new Padding(6);
             button5.Name = "button5";
             button5.Size = new Size(139, 49);
@@ -113,7 +115,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(25, 332);
+            button6.Location = new Point(176, 149);
             button6.Margin = new Padding(6);
             button6.Name = "button6";
             button6.Size = new Size(139, 49);
@@ -124,7 +126,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(25, 393);
+            button7.Location = new Point(25, 210);
             button7.Margin = new Padding(6);
             button7.Name = "button7";
             button7.Size = new Size(139, 49);
@@ -133,17 +135,32 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
-            // Form1
+            // buttonExit
+            // 
+            buttonExit.AutoSize = true;
+            buttonExit.Dock = DockStyle.Left;
+            buttonExit.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            buttonExit.Location = new Point(22, 268);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(276, 47);
+            buttonExit.TabIndex = 9;
+            buttonExit.Text = "Выход";
+            buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += buttonExit_Click;
+            // 
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(194, 474);
+            ClientSize = new Size(341, 335);
             Controls.Add(flowLayoutPanel1);
             Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Margin = new Padding(6, 6, 6, 6);
-            Name = "Form1";
+            Margin = new Padding(6);
+            Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Главная форма";
             flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -156,5 +173,6 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private Button buttonExit;
     }
 }

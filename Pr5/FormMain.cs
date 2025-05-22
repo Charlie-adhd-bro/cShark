@@ -9,7 +9,9 @@ namespace Pr5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //в кабинете
+            this.Hide();
+            Pr5_1 mainForm = new();
+            mainForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,6 +54,11 @@ namespace Pr5
             this.Hide();
             Pr5_7 mainForm = new();
             mainForm.Show();
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
