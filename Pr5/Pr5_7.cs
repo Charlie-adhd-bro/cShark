@@ -14,7 +14,6 @@
             }
             return input;
 
-            //string.Concat(input, chars)
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -27,14 +26,18 @@
 
                 if (string.IsNullOrWhiteSpace(inputs) || chars.Length == 0)
                 {
-                    MessageBox.Show("Оба текстовых поля должны быть заполнены",
-                        "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Оба текстовых поля должны быть заполнены",
+                        "Ошибка ввода", 
+                        MessageBoxButtons.OK, 
+                        MessageBoxIcon.Error
+                    );
                     return;
                 }
 
                 labelResult.Text = CharsToString(inputs, chars);
                 labelResult.Text += '\n' + CharsToString(inputs, '1', ' ', '2');
-                labelResult.Text += CharsToString(inputs, '1');
+                labelResult.Text += '\n' + CharsToString(inputs, '1');
             }
             catch (Exception ex)
             {

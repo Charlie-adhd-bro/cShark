@@ -8,12 +8,6 @@
         }
         public static int FindMaxElement(int[,] array, out int rowIndex, out int colIndex)
         {
-            if (array == null || array.Length == 0)
-            {
-                rowIndex = -1;
-                colIndex = -1;
-                return int.MinValue;
-            }
 
             int max = array[0, 0];
             rowIndex = 0;
@@ -45,9 +39,9 @@
 
             //3 тест
             //int[,] array = {
-            //{4, 9, 2},
-            //{9, 5, 3},
-            //{1, 9, 0}
+            //    {4, 9, 2},
+            //    {9, 5, 3},
+            //    {1, 9, 0}
             //};
 
             //4 тест
@@ -55,8 +49,12 @@
 
             if (array.Length == 0)
             {
-                MessageBox.Show("Массив пуст", "",
-                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Массив пуст", 
+                    "Информация",
+                   MessageBoxButtons.OK, 
+                   MessageBoxIcon.Warning
+                );
             }
             else
             {
