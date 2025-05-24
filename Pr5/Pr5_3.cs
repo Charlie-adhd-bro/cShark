@@ -10,10 +10,10 @@
             InitializeComponent();
         }
 
-        public static int[] GetCharCodes(char[] array)
+        public static int[] GetCharCodes(char[] array, int length)
         {
-            int[] codes = new int[array.Length];
-            for (int i = 0; i < array.Length; i++)
+            int[] codes = new int[length];
+            for (int i = 0; i < length; i++)
             {
                 codes[i] = (int)array[i];
             }
@@ -22,33 +22,50 @@
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (currentIndex >= charArray.Length)
+            string inputText = textBox.Text;
+            if (string.IsNullOrEmpty(inputText))
             {
-                MessageBox.Show("Массив заполнен!", "Информация",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "Текстовое поле пустое, введите хотя бы один символ", 
+                    "Ошибка",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning
+                );
                 return;
             }
 
-            if (textBox.Text.Length == 1)
+            foreach (char c in inputText)
             {
-                charArray[currentIndex] = textBox.Text[0];
+                if (currentIndex >= charArray.Length)
+                {
+                    MessageBox.Show(
+                        "Массив заполнен!", 
+                        "Информация",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    break;
+                }
+
+                charArray[currentIndex] = c;
                 currentIndex++;
-
-                labelResult.Text = "Текущий массив:\n " +
-                    string.Join(", ", charArray.Take(currentIndex).Select(c => $"'{c}'"));
-
-                labelInstructions.Text = $"Осталось символов: {charArray.Length - currentIndex}";
-                textBox.Clear();
-
-                int[] codes = GetCharCodes(charArray);
-                labelResult.Text += $"\nКоды символов:\n{string.Join(", ", codes)}";
-                
             }
-            else
+
+            string[] formattedChars = new string[currentIndex];
+
+            for (int i = 0; i < currentIndex; i++)
             {
-                MessageBox.Show("Введите ровно один символ!", "Ошибка",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                formattedChars[i] = $"'{charArray[i]}'";
             }
+
+            string resultString = string.Join(", ", formattedChars);
+
+            labelResult.Text = "Текущий массив:\n " + resultString;
+            labelResult.Text += $"\nКоды символов:\n" +
+                $"{string.Join(", ", GetCharCodes(charArray, currentIndex))}";
+
+            labelInstructions.Text = $"Осталось символов: {charArray.Length - currentIndex}";
+            textBox.Clear();       
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)

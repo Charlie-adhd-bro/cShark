@@ -142,7 +142,7 @@
             buttonExit.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             buttonExit.Location = new Point(22, 268);
             buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(276, 47);
+            buttonExit.Size = new Size(293, 47);
             buttonExit.TabIndex = 9;
             buttonExit.Text = "Выход";
             buttonExit.UseVisualStyleBackColor = true;

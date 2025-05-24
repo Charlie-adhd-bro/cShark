@@ -6,17 +6,17 @@
         {
             InitializeComponent();
         }
-        static int DoubleFactorialRecursive(int n)
+        static double DoubleFactorialRecursive(int n)
         {
             if (n <= 1)
                 return 1;
             return n * DoubleFactorialRecursive(n - 2);
         }
-        static int DoubleFactorialIterative(int n)
+        static double DoubleFactorialIterative(int n)
         {
             if (n <= 1)
                 return 1;
-            int result = 1;
+            double result = 1;
             for (int i = n; i > 0; i -= 2)
             {
                 result *= i;
@@ -36,35 +36,42 @@
                 {
                     choice = "without recursion"; break;
                 }
-
                 else
                 {
-                    MessageBox.Show("Выберите один из циклов", "не выбрано",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(
+                        "Выберите одну из радиокнопок", 
+                        "не выбрано",
+                        MessageBoxButtons.OK, 
+                        MessageBoxIcon.Warning
+                    );
                     return;
                 }
             }
 
             int n;
+
             if (!Int32.TryParse(txtInput.Text, out n) || n < 0)
             {
-                MessageBox.Show("Введите корректное число\n" +
-                    "(больше или равно нулю, целое)", "Неккоректный ввод",
-                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Введите корректное число\n(больше или равно нулю, целое)", 
+                    "Неккоректный ввод",
+                   MessageBoxButtons.OK, 
+                   MessageBoxIcon.Warning
+                );
                 return;
             }
-
             switch (choice)
             {
                 case "with recursion":
-                    string result = "Двойной факториал через рекурсию:\n"
+                    labelResult.Text = "Двойной факториал через рекурсию:\n"
                         + DoubleFactorialRecursive(n).ToString();
-                    labelResult.Text = result;
+                   
                     break;
                 case "without recursion":
-                    result = "Двойной факториал без рекурсии:\n"
-                        + DoubleFactorialIterative(n).ToString();
-                    labelResult.Text = result;
+                    labelResult.Text = "Двойной факториал без рекурсии:\n"
+                        + DoubleFactorialIterative(n).ToString(); 
+                        
+
                     break;
             }
 

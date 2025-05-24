@@ -33,6 +33,10 @@
                 string[] inputs = textBox.Text.Split([' ', ','], StringSplitOptions.RemoveEmptyEntries);
                 int[] numbers = Array.ConvertAll(inputs, int.Parse);
 
+                if (numbers.Length == 0)
+                {
+
+                }
                 int[] result = FindMinMax(numbers);
 
                 labelResult.Text = $"Минимальное: {result[0]}, Максимальное: {result[1]}";

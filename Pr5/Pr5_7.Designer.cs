@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pr5_7));
             label2 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            textBox = new TextBox();
+            textBoxInput = new TextBox();
             btnSubmit = new Button();
             labelResult = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            label3 = new Label();
+            label1 = new Label();
+            textBoxChars = new TextBox();
             btnRepeat = new Button();
             btnTransition = new Button();
             flowLayoutPanel2.SuspendLayout();
@@ -42,121 +46,101 @@
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Top;
-            label2.Location = new Point(25, 21);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            resources.ApplyResources(label2, "label2");
             label2.Name = "label2";
-            label2.Size = new Size(210, 32);
-            label2.TabIndex = 3;
-            label2.Text = "Введите символы";
-            label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // flowLayoutPanel2
             // 
+            resources.ApplyResources(flowLayoutPanel2, "flowLayoutPanel2");
             flowLayoutPanel2.Controls.Add(label2);
-            flowLayoutPanel2.Dock = DockStyle.Top;
-            flowLayoutPanel2.Location = new Point(0, 0);
-            flowLayoutPanel2.Margin = new Padding(6);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Padding = new Padding(19, 21, 19, 21);
-            flowLayoutPanel2.Size = new Size(369, 67);
-            flowLayoutPanel2.TabIndex = 7;
             // 
-            // textBox
+            // textBoxInput
             // 
-            textBox.Location = new Point(25, 27);
-            textBox.Margin = new Padding(6);
-            textBox.Name = "textBox";
-            textBox.Size = new Size(314, 39);
-            textBox.TabIndex = 1;
+            resources.ApplyResources(textBoxInput, "textBoxInput");
+            textBoxInput.Name = "textBoxInput";
             // 
             // btnSubmit
             // 
-            btnSubmit.Location = new Point(25, 78);
-            btnSubmit.Margin = new Padding(6);
+            resources.ApplyResources(btnSubmit, "btnSubmit");
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(139, 49);
-            btnSubmit.TabIndex = 0;
-            btnSubmit.Text = "Результат";
-            btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += btnSubmit_Click;
             // 
             // labelResult
             // 
-            labelResult.AutoSize = true;
-            labelResult.Location = new Point(176, 72);
-            labelResult.Margin = new Padding(6, 0, 6, 0);
+            resources.ApplyResources(labelResult, "labelResult");
             labelResult.Name = "labelResult";
-            labelResult.Size = new Size(0, 32);
-            labelResult.TabIndex = 2;
-            labelResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(textBox);
+            resources.ApplyResources(flowLayoutPanel1, "flowLayoutPanel1");
+            flowLayoutPanel1.Controls.Add(label3);
+            flowLayoutPanel1.Controls.Add(textBoxInput);
+            flowLayoutPanel1.Controls.Add(label1);
+            flowLayoutPanel1.Controls.Add(textBoxChars);
             flowLayoutPanel1.Controls.Add(btnSubmit);
-            flowLayoutPanel1.Controls.Add(labelResult);
             flowLayoutPanel1.Controls.Add(btnRepeat);
             flowLayoutPanel1.Controls.Add(btnTransition);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(0, 67);
-            flowLayoutPanel1.Margin = new Padding(6);
+            flowLayoutPanel1.Controls.Add(labelResult);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(19, 21, 19, 21);
-            flowLayoutPanel1.Size = new Size(369, 407);
-            flowLayoutPanel1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
+            // textBoxChars
+            // 
+            resources.ApplyResources(textBoxChars, "textBoxChars");
+            textBoxChars.Name = "textBoxChars";
             // 
             // btnRepeat
             // 
-            btnRepeat.Location = new Point(188, 78);
-            btnRepeat.Margin = new Padding(6);
+            resources.ApplyResources(btnRepeat, "btnRepeat");
             btnRepeat.Name = "btnRepeat";
-            btnRepeat.Size = new Size(151, 49);
-            btnRepeat.TabIndex = 3;
-            btnRepeat.Text = "Сброс";
-            btnRepeat.UseVisualStyleBackColor = true;
+            btnRepeat.UseVisualStyleBackColor = false;
             btnRepeat.Click += btnRepeat_Click;
             // 
             // btnTransition
             // 
-            btnTransition.Location = new Point(25, 139);
-            btnTransition.Margin = new Padding(6);
+            resources.ApplyResources(btnTransition, "btnTransition");
             btnTransition.Name = "btnTransition";
-            btnTransition.Size = new Size(139, 49);
-            btnTransition.TabIndex = 4;
-            btnTransition.Text = "Вернуться ";
-            btnTransition.UseVisualStyleBackColor = true;
+            btnTransition.UseVisualStyleBackColor = false;
             btnTransition.Click += btnTransition_Click;
             // 
             // Pr5_7
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(369, 474);
+            AutoScaleMode = AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             Controls.Add(flowLayoutPanel1);
             Controls.Add(flowLayoutPanel2);
-            Font = new Font("Segoe UI", 18F);
-            Margin = new Padding(6);
             Name = "Pr5_7";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pr5_7";
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label2;
         private FlowLayoutPanel flowLayoutPanel2;
-        private TextBox textBox;
+        private TextBox textBoxInput;
         private Button btnSubmit;
         private Label labelResult;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button btnRepeat;
         private Button btnTransition;
+        private TextBox textBoxChars;
+        private Label label3;
+        private Label label1;
     }
 }

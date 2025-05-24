@@ -51,7 +51,7 @@ namespace Pr5
                 }
                 else
                 {
-                    MessageBox.Show("Введите корректные целые натуральные числа",
+                    MessageBox.Show("Введите корректные целые числа",
                         "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -65,9 +65,15 @@ namespace Pr5
                 }
                 else
                 {
-                    MessageBox.Show("Введите корректные символы",
+                    MessageBox.Show("Введите корректные символы\n" +
+                        "(по одному в текстовых полях) ",
                         "Ошибка ввода", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show("выберите радиокнопку","не выбрано",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

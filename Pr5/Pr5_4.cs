@@ -36,26 +36,26 @@
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             // 1 тест
-            //int[,] array = {
-            //    {2, 4, 6}
-            //};
+            int[,] array = {
+                {2, 4, 6}
+            };
 
             // 2 тест
             //int[,] array = { };
 
             //3 тест
-            int[,] array = {
-            {4, 9, 2},
-            {9, 5, 3},
-            {1, 9, 0}
-            };
+            //int[,] array = {
+            //{4, 9, 2},
+            //{9, 5, 3},
+            //{1, 9, 0}
+            //};
 
             //4 тест
+            //int[,] array = { { 42 } };
 
-            //5 тест
             if (array.Length == 0)
             {
-                MessageBox.Show("Массив пуст", "не выбрано",
+                MessageBox.Show("Массив пуст", "",
                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else

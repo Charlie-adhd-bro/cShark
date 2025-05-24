@@ -25,7 +25,7 @@
             {
                 if (n <= 0)
                 {
-                    MessageBox.Show("Не натуральное число", "",
+                    MessageBox.Show("Подмассив должен иметь положительное значение", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
